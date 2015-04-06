@@ -1,0 +1,252 @@
+body {
+   font-family: "HelveticaNeue-UltraThin", "Helvetica Neue UltraThin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   margin: 0;
+   padding: 0;
+   color: white;
+   background-color: #1C0B19;
+   font-size: 16px;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+}
+
+#icon
+{
+	margin: 1px auto 5px auto;
+	width: 100px;
+}
+
+#maxTabs
+{
+	margin: 10px auto;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+/*	border-radius: 5px;*/
+	border-style: none;
+	box-shadow: 0 0 0 1px #ffffff;
+	color: white;
+	float: left;
+/*	padding: 5px 10px;*/
+	/*width: 165px;*/
+	width: 99%;
+	outline: none;
+	font-size: 45px;
+	font-weight: 100;
+	font-family: "HelveticaNeue-UltraThin", "Helvetica Neue UltraThin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+::-webkit-input-placeholder {
+	font-size: 30px;
+	margin: auto;
+	line-height: 170%;
+}
+
+.veil
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+/*	background-color: rgba(0,0,0,0.8);*/
+	background-image: url(waveBack.jpg);
+	opacity: 0.1;
+	z-index: -1;
+}
+
+.whiteFold
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 179px;
+	background-color: rgba(255,255,255,0.95);
+	z-index: -1;
+}
+
+
+#container
+{
+	height: 255px;
+	width: 200px;
+}
+
+#mainContent
+{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	-webkit-flex-direction: column;
+/*	justify-content: center;*/
+/*	align-items: center;*/
+}
+
+.tabventionButton
+{
+	height: 20px;
+	width: 100px;
+	padding: 10px;
+	background-color: #6320EE;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+}
+
+.tabventionButton:hover
+{
+	background-color: red;
+}
+
+/* I took this masterpiece from: http://codepen.io/stefgeraets/pen/ExfBd*/
+
+.switch input {
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switch {
+	width: 180px;
+	height: 55px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#toggleSection
+{
+	position: absolute;
+  	padding-top: 8px;
+  	padding-left: 4px;
+}
+
+.switch label {
+	display: block;
+	width: 80%;
+	height: 100%;
+	position: relative;
+	background: #1F2736; /*#121823*/
+    background: linear-gradient(#121823, #161d2b);
+	border-radius: 30px 30px 30px 30px;
+	box-shadow:
+        inset 0 3px 8px 1px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(0,0,0,0.5),
+        0 1px 0 rgba(255,255,255,0.2);
+		-webkit-transition: all .5s ease;
+		transition: all .5s ease;
+}
+
+.switch input ~ label i {
+    display: block;
+    height: 51px;
+    width: 51px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: 2;
+    border-radius: inherit;
+    background: #283446; /* Fallback */
+    background: linear-gradient(#36455b, #283446);
+	box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.2),
+        0 0 8px rgba(0,0,0,0.3),
+        0 8px 8px rgba(0,0,0,0.3),
+		inset -1px 0 1px #BF1E31;
+	-webkit-transition: all .5s ease;
+transition: all .5s ease;
+}
+
+
+.switch label + span {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 17px;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	background: #9D3051;/*#283446; */
+/*background: gradient-gradient(#36455b, #283446);*/
+/*background: #b9f3fe; 
+background: gradient-gradient(#ffffff, #77a1b9);*/
+/*box-shadow:
+		  inset 0 1px 0 rgba(240,0,0,0.2),
+  		0 1px 0 rgba(255,255,255,0.1),
+  		0 0 10px rgba(185,231,253,0),
+  inset 0 0 8px rgba(240,0,0,0.9),
+  inset 0 -2px 5px rgba(240,0,0,0.3),
+  inset 0 -5px 5px rgba(240,0,0,0.5);*/
+  box-shadow:        
+		  inset 0 1px 0 rgba(150,0,0,0.1),
+		  0 1px 0 rgba(255,255,255,0.1),
+		  0 0 10px rgba(240,10,10,1),
+		  inset 0 0 8px rgba( 240,10,0,0.8),
+  inset 0 -2px 5px rgba(240,10,10,0.3),
+  inset 0 -3px 8px rgba(240,10,10,0.5);
+ 	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+	z-index: 2;
+}
+
+#offLabel
+{
+	position: absolute;
+	font-weight: 200;
+	z-index: 5;
+	margin-left: 50%;
+	margin-top: 18px;
+	-webkit-transition: all .5s ease;
+}
+
+
+
+ /* Toggle */
+.switch input:checked ~ label + span { 
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+	z-index: 2;
+	background: #b9f3fe; 
+background: gradient-gradient(#ffffff, #77a1b9);
+box-shadow:        
+		  inset 0 1px 0 rgba(0,0,0,0.1),
+		  0 1px 0 rgba(255,255,255,0.1),
+		  0 0 10px rgba(100,231,253,1),
+		  inset 0 0 8px rgba( 61,157,247,0.8),
+  inset 0 -2px 5px rgba(185,231,253,0.3),
+  inset 0 -3px 8px rgba(185,231,253,0.5);
+
+ }
+
+.switch input:checked ~ label i {
+    left: auto;
+    left: 63%;
+	box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.2),
+        0 0 8px rgba(0,0,0,0.3),
+        0 8px 8px rgba(0,0,0,0.3),
+		inset -1px 0 1px #b9f3fe;
+
+	-webkit-transition: all .5s ease;
+transition: all .5s ease;
+}
+
+.switch input:checked + p
+{
+	opacity: 0;
+}
