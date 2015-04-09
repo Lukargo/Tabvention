@@ -32,7 +32,7 @@ function fileAwayDemTabs(newTab)
 
 		console.log(moment().format('MMMM Do, YYYY'));
 
-		chrome.tabs.query({}, function(tabs){
+		chrome.tabs.query({pinned : false}, function(tabs){
 			var tabCount = tabs.length;
 
 			console.log("tabCount: " + tabCount);
